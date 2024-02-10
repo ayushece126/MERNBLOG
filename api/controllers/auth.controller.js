@@ -14,7 +14,7 @@ const signup = async (req, res,next) => {
     });
 
     if (existingUser) {
-        return res.status(400).json({ email: 'A user has already registered with this email' });
+        return res.status(400).json({ msg: 'A user has already registered with this email' });
     } else {
 
         const password = req.body.password;
